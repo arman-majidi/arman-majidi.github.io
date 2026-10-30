@@ -1,329 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arman Majidi — M.Sc. student in Electrical Engineering (Telecommunications - Systems) at Sharif University of Technology. Researching blind speech separation, signal processing, and machine learning.">
-  <meta property="og:title" content="Arman Majidi | Electrical Engineering & Signal Processing">
-  <meta property="og:description" content="M.Sc. student at Sharif University of Technology working on blind speech separation, statistical signal processing, and machine learning.">
-  <meta property="og:type" content="website">
-  <title>Arman Majidi</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="theme.js"></script>
-  <script src="app.js" defer></script>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Arman Majidi, M.Sc. student at Sharif University of Technology. Research in blind speech separation, signal processing and machine learning." name="description"/>
+<meta content="Arman Majidi | Electrical Engineering &amp; Signal Processing" property="og:title"/>
+<meta content="Arman Majidi, M.Sc. student at Sharif University of Technology. Research in blind speech separation, signal processing and machine learning." property="og:description"/>
+<meta content="website" property="og:type"/>
+<title>Arman Majidi · Signal Processing</title>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="theme.js"></script>
+<script defer="" src="app.js"></script>
+<script defer="" src="signals.js"></script></head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
-      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
-      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
-      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 14A9 9 0 0 1 10 3a9 9 0 1 0 11 11Z"/></symbol>
-      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
-    </defs>
-  </svg>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg aria-hidden="true" class="icon-defs" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="i-mail" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m3 7 9 6 9-6"></path></symbol>
+<symbol id="i-pin" viewbox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+<symbol id="i-download" viewbox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"></path></symbol>
+<symbol id="i-copy" viewbox="0 0 24 24"><rect height="13" rx="2" width="12" x="8" y="8"></rect><path d="M16 8V3H3v13h5"></path></symbol>
+<symbol id="i-sun" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></symbol>
+<symbol id="i-moon" viewbox="0 0 24 24"><path d="M21 14A9 9 0 0 1 10 3a9 9 0 1 0 11 11Z"></path></symbol>
+<symbol id="i-menu" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></symbol>
+<symbol id="i-mic" viewbox="0 0 24 24"><rect height="12" rx="3" width="6" x="9" y="2"></rect><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"></path></symbol></defs>
+</svg>
+<header class="site-header">
+<div class="header-inner">
+<a class="site-title" href="#about"><svg aria-hidden="true" viewbox="0 0 32 24"><path d="M1 12h5l3-8 5 17 4-15 3 6h10"></path></svg><span>Arman Majidi<span class="title-dot">.</span></span></a>
+<div class="header-right">
+<nav aria-label="Main navigation" id="main-nav">
+<a aria-current="location" href="#about">About</a><a href="#research">Research</a>
+<a href="#education">Education</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-title" href="#about">Arman Majidi</a>
-      <div class="header-right">
-        <nav id="main-nav" aria-label="Main navigation">
-          <a href="#about" aria-current="location">About</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
-          <svg class="icon moon" aria-hidden="true"><use href="#i-moon"/></svg>
-          <svg class="icon sun" aria-hidden="true"><use href="#i-sun"/></svg>
-        </button>
-        <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation">
-          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+<button aria-label="Switch to dark theme" class="icon-button theme-toggle" id="theme-toggle" type="button">
+<svg aria-hidden="true" class="icon moon"><use href="#i-moon"></use></svg>
+<svg aria-hidden="true" class="icon sun"><use href="#i-sun"></use></svg>
+</button>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation" class="icon-button menu-toggle" id="menu-toggle" type="button">
+<svg aria-hidden="true" class="icon"><use href="#i-menu"></use></svg>
+</button>
+</div>
+</div>
+</header>
+<div class="layout">
+<aside aria-label="Author profile" class="profile">
+<div class="portrait">
+<img alt="Portrait of Arman Majidi" height="210" src="assets/portrait.jpg" width="210"/>
+</div>
+<div class="profile-info">
+<h1>Arman Majidi</h1>
+<p class="profile-role">M.Sc. student in Electrical Engineering</p>
+<p class="affiliation">Sharif University of Technology</p>
+<p class="profile-bio-short">Telecommunications (Systems)</p>
+</div>
+<ul class="profile-contact-list">
+<li>
+<svg aria-hidden="true" class="icon"><use href="#i-pin"></use></svg>
+<span>Tehran, Iran</span>
+</li>
+<li>
+<a href="mailto:arman.majidi.2003@gmail.com">
+<svg aria-hidden="true" class="icon"><use href="#i-mail"></use></svg>
+<span>Email</span>
+</a>
+</li>
+<li>
+<a href="https://github.com/arman-majidi" rel="noopener noreferrer" target="_blank">
+<img alt="" class="github-mark" height="17" src="assets/github.svg" width="17"/>
+<span>GitHub</span>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/arman-majidi/" rel="noopener noreferrer" target="_blank">
+<img alt="" height="17" src="assets/linkedin.svg" width="17"/>
+<span>LinkedIn</span>
+</a>
+</li>
+</ul>
+<div class="cv-actions">
+<a class="button primary" download="Arman_Majidi_CV.pdf" href="assets/Arman_Majidi_CV.pdf">
+<svg aria-hidden="true" class="icon"><use href="#i-download"></use></svg>
+<span>Download CV</span>
+</a>
+</div>
+</aside>
+<main id="main">
+<section class="about section" id="about">
+<p class="eyebrow">Signal processing &amp; machine learning</p>
+<h2 class="intro-title">Hi, I'm Arman.</h2>
+<p class="intro-lead">I'm an M.Sc. student at <strong>Sharif University of Technology</strong>, working on <a href="#research">blind speech separation</a> with Dr. Massoud Babaie-Zadeh.</p>
+<p>I study how to recover individual voices when several people speak at once. More broadly, I'm interested in statistical signal processing and in what learning methods can tell us about a signal.</p>
+<p>Before Sharif, I studied electrical engineering at the <strong>University of Tehran</strong>. My undergraduate thesis used accelerometer data and a CNN to recognize body postures, under the supervision of Dr. Saeed Akhavan.</p>
+<div class="interest-note"><span class="note-label">Other interests</span><p>Speech &amp; audio · Adaptive filtering · Estimation theory · Deep learning · Graph signal processing</p></div>
+<div class="intro-links"><a href="#research">A closer look at my research <span aria-hidden="true">↓</span></a><a href="assets/Arman_Majidi_CV.pdf">Read my CV <span aria-hidden="true">↗</span></a></div>
+</section><section class="section" id="research">
+<div class="section-heading"><h2 class="section-title">Research</h2><span class="section-note">The questions behind my work</span></div>
+<article class="research-entry">
+<div class="research-meta"><span class="research-kind"><span aria-hidden="true" class="status-dot"></span>M.Sc. thesis · In progress</span><span>Sharif University of Technology</span></div>
+<h3>Blind speech separation</h3>
+<p class="research-desc">A microphone records everything at once. My research asks how we can recover the individual speakers from those overlapping recordings, without knowing the mixing process in advance.</p>
+<p class="research-supervisor">Supervised by Dr. Massoud Babaie-Zadeh</p>
+<figure aria-describedby="signal-caption" aria-labelledby="signal-title" class="signal-lab" id="signal-lab">
+<div class="figure-heading"><div><span class="figure-number">Fig. 01 / An interactive sketch</span><h4 id="signal-title">Three sources, two microphones</h4></div><button aria-pressed="false" class="quiet-button" id="motion-toggle" type="button"><span aria-hidden="true" class="motion-symbol">Ⅱ</span><span class="motion-label">Pause</span></button></div>
+<div class="lab-toolbar"><p>Switch a source off. Watch both mixtures change.</p><div aria-label="Signal view" class="segmented" role="group"><button aria-pressed="true" data-view="time" type="button">Time</button><button aria-pressed="false" data-view="frequency" type="button">Frequency</button></div></div>
+<div class="mixing-scene">
+<div class="source-column"><div class="plot-column-label">Individual sources</div>
+<div class="source-row" data-source-row="0"><button aria-label="Source 1" aria-pressed="true" class="source-switch source-one" data-source="0" type="button"><span aria-hidden="true" class="source-dot"></span><span>Source 1</span><span class="source-state">on</span></button><canvas aria-label="Synthetic source 1 waveform" height="104" id="source-0" role="img" width="520"></canvas></div>
+<div class="source-row" data-source-row="1"><button aria-label="Source 2" aria-pressed="true" class="source-switch source-two" data-source="1" type="button"><span aria-hidden="true" class="source-dot"></span><span>Source 2</span><span class="source-state">on</span></button><canvas aria-label="Synthetic source 2 waveform" height="104" id="source-1" role="img" width="520"></canvas></div>
+<div class="source-row" data-source-row="2"><button aria-label="Source 3" aria-pressed="true" class="source-switch source-three" data-source="2" type="button"><span aria-hidden="true" class="source-dot"></span><span>Source 3</span><span class="source-state">on</span></button><canvas aria-label="Synthetic source 3 waveform" height="104" id="source-2" role="img" width="520"></canvas></div>
+</div>
+<div aria-hidden="true" class="mixing-paths"><svg preserveaspectratio="none" viewbox="0 0 100 260"><path d="M0 54C52 54 48 88 100 88M0 54C52 54 48 201 100 201" data-wire="0"></path><path d="M0 142C52 142 48 88 100 88M0 142C52 142 48 201 100 201" data-wire="1"></path><path d="M0 230C52 230 48 88 100 88M0 230C52 230 48 201 100 201" data-wire="2"></path></svg></div>
+<div class="mixture-column"><div class="plot-column-label">What the microphones receive</div>
+<div class="mixture-row"><div class="mixture-label"><span><svg aria-hidden="true" class="icon"><use href="#i-mic"></use></svg>Microphone 1</span><output aria-label="Microphone 1 root mean square amplitude" id="rms-0">RMS —</output></div><canvas aria-label="First weighted mixture of the synthetic sources" height="160" id="mixture-0" role="img" width="600"></canvas></div>
+<div class="mixture-row"><div class="mixture-label"><span><svg aria-hidden="true" class="icon"><use href="#i-mic"></use></svg>Microphone 2</span><output aria-label="Microphone 2 root mean square amplitude" id="rms-1">RMS —</output></div><canvas aria-label="Second weighted mixture of the synthetic sources" height="160" id="mixture-1" role="img" width="600"></canvas></div>
+</div>
+</div>
+<div class="plot-footnote"><span id="plot-axis-label">Time: 0–1 s · Shared amplitude scale</span><span aria-live="polite" id="source-count" role="status">3 sources active</span></div>
+<div class="level-control"><label for="source-level">Source 2 level</label><input id="source-level" max="150" min="0" step="5" type="range" value="100"/><output for="source-level" id="level-value">100%</output><button class="text-button" id="reset-signals" type="button">Reset</button></div>
+<figcaption id="signal-caption"><strong>The challenge:</strong> the sources on the left are visible here, but a separation algorithm only receives the mixtures on the right. These are synthetic signals, not speech recordings or a separation result.</figcaption>
+<details class="model-details"><summary>About this little model</summary><div><p>The illustration uses instantaneous linear mixing, with no noise or reverberation. Source components are at 6/12, 11/22 and 17/34 Hz, sampled at 256 Hz. These deliberately low frequencies make the traces easy to see.</p><p class="model-equations">x₁ = s₁ + 0.65s₂ + 0.32s₃<br/>x₂ = 0.35s₁ + 0.85s₂ + s₃</p><p>The frequency view shows the one-sided DFT magnitude over a one-second window. RMS is calculated from that window. This demonstrates mixing; it does not implement a source separation method.</p></div></details>
+<noscript><p class="noscript-note">Enable JavaScript to explore the synthetic signal illustration. The rest of the website works without it.</p></noscript>
+</figure>
+</article>
+<article class="research-entry posture-entry">
+<div class="research-meta"><span class="research-kind">B.Sc. thesis · 2025</span><span>University of Tehran</span></div>
+<h3>Recognizing body posture from sensor data</h3>
+<p class="research-desc">For my undergraduate thesis, I built a CNN pipeline to classify body postures from accelerometer recordings. The starting point is a small sensor producing three time series.</p>
+<p class="research-supervisor">Supervised by Dr. Saeed Akhavan</p>
+<figure aria-labelledby="sensor-title" class="sensor-figure">
+<div class="figure-heading"><div><span class="figure-number">Fig. 02 / From measurements to a label</span><h4 id="sensor-title">One sensor, three axes</h4></div><div aria-label="Highlight an accelerometer axis" class="axis-controls" role="group"><button aria-pressed="true" data-axis="all" type="button">All</button><button aria-pressed="false" data-axis="x" type="button">x</button><button aria-pressed="false" data-axis="y" type="button">y</button><button aria-pressed="false" data-axis="z" type="button">z</button></div></div>
+<div class="sensor-scene"><div class="sensor-object"><svg aria-label="Illustrated accelerometer with x, y and z axes" role="img" viewbox="0 0 150 150"><path class="sensor-outline" d="m37 53 48-22 37 30-48 22Z M37 53v40l37 29V83 M74 122l48-22V61"></path><path class="axis-line axis-x" d="m74 83 58 34m-5-9 5 9-10-1"></path><path class="axis-line axis-y" d="m74 83-54 25m9-9-9 9 12-1"></path><path class="axis-line axis-z" d="M74 83V9m-5 9 5-9 5 9"></path><text class="axis-text axis-x" x="131" y="135">x</text><text class="axis-text axis-y" x="12" y="129">y</text><text class="axis-text axis-z" x="84" y="17">z</text><circle class="sensor-center" cx="74" cy="83" r="4"></circle></svg><span>Accelerometer</span></div>
+<div class="sensor-traces"><div class="sensor-trace axis-x" data-sensor-axis="x"><span>x</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 360 44"><path id="accel-x"></path></svg></div><div class="sensor-trace axis-y" data-sensor-axis="y"><span>y</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 360 44"><path id="accel-y"></path></svg></div><div class="sensor-trace axis-z" data-sensor-axis="z"><span>z</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 360 44"><path id="accel-z"></path></svg></div><span class="trace-caption">Illustrative time series</span></div></div>
+<ol class="pipeline"><li><span class="pipeline-number">01</span><span>Record <small>Three-axis signal</small></span></li><li><span class="pipeline-number">02</span><span>Prepare <small>Signal windows</small></span></li><li><span class="pipeline-number">03</span><span>Learn <small>CNN</small></span></li><li><span class="pipeline-number">04</span><span>Recognize <small>Body posture</small></span></li></ol>
+<figcaption id="axis-note">Highlight an axis to follow its trace. This sketch explains the pipeline; it does not show experimental data or a model prediction.</figcaption>
+</figure>
+<details class="plain-details"><summary>Full thesis title</summary><p>Body Posture Recognition Using an Accelerometer Sensor with a CNN Architecture</p></details>
+</article>
+</section>
+<section class="section" id="education">
+<div class="section-heading"><h2 class="section-title">Education</h2><span class="section-note">Tehran → Sharif</span></div>
+<div class="edu-list">
+<article class="edu-item timeline-item"><span aria-hidden="true" class="timeline-marker"></span>
+<div class="item-header">
+<h3>Sharif University of Technology</h3>
+<span class="item-date">2025 – Present · Tehran, Iran</span>
+</div>
+<p class="item-subtitle">M.Sc. in Electrical Engineering – Telecommunications (Systems)</p>
+<ul class="item-details">
+<li><strong>GPA (to date):</strong> 18.12 / 20</li>
+<li><strong>Thesis (in progress):</strong> Blind Speech Separation (Supervisor: Dr. Massoud Babaie-Zadeh)</li>
+</ul>
+</article>
+<article class="edu-item timeline-item"><span aria-hidden="true" class="timeline-marker"></span>
+<div class="item-header">
+<h3>University of Tehran</h3>
+<span class="item-date">2021 – 2025 · Tehran, Iran</span>
+</div>
+<p class="item-subtitle">B.Sc. in Electrical Engineering (Telecommunications)</p>
+<ul class="item-details">
+<li><strong>GPA:</strong> 18.38 / 20</li>
+<li><strong>Thesis:</strong> Body Posture Recognition Using an Accelerometer Sensor with a CNN Architecture (Supervisor: Dr. Saeed Akhavan)</li>
+</ul>
+</article>
+</div>
+<details class="coursework-block">
+<summary><span>Selected coursework</span><span class="details-meta">7 courses · Grades out of 20</span></summary>
+<div class="course-grid">
+<div class="course-row"><span>Foundations of Computer Vision</span><span class="course-grade">20 / 20</span></div>
+<div class="course-row"><span>Adaptive Filters</span><span class="course-grade">19.7 / 20</span></div>
+<div class="course-row"><span>Blind Source Separation</span><span class="course-grade">19.25 / 20</span></div>
+<div class="course-row"><span>Estimation Theory</span><span class="course-grade">18.7 / 20</span></div>
+<div class="course-row"><span>Neural Networks &amp; Deep Learning</span><span class="course-grade">18.55 / 20</span></div>
+<div class="course-row"><span>Graph Signal Processing</span><span class="course-grade">17.2 / 20</span></div>
+<div class="course-row"><span>Information Theory &amp; Learning</span><span class="course-grade">16 / 20</span></div>
+</div>
+</details>
+</section>
 
-  <div class="layout">
-    <aside class="profile" aria-label="Author profile">
-      <div class="portrait">
-        <img src="assets/portrait.jpg" alt="Portrait of Arman Majidi" width="210" height="210">
-      </div>
-      <div class="profile-info">
-        <h1>Arman Majidi</h1>
-        <p class="profile-role">M.Sc. Student in Electrical Engineering</p>
-        <p class="affiliation">Sharif University of Technology</p>
-        <p class="profile-bio-short">Telecommunications (Systems) · Signal Processing &amp; Machine Learning</p>
-      </div>
-      <ul class="profile-contact-list">
-        <li>
-          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
-          <span>Tehran, Iran</span>
-        </li>
-        <li>
-          <a href="mailto:arman.majidi.2003@gmail.com">
-            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
-            <span>Email</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/arman-majidi" target="_blank" rel="noopener noreferrer">
-            <img class="github-mark" src="assets/github.svg" alt="" width="17" height="17">
-            <span>github.com/arman-majidi</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/arman-majidi/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/linkedin.svg" alt="" width="17" height="17">
-            <span>LinkedIn</span>
-          </a>
-        </li>
-      </ul>
-      <div class="cv-actions">
-        <a class="button primary" href="assets/Arman_Majidi_CV.pdf" download="Arman_Majidi_CV.pdf">
-          <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
-          <span>Download CV (PDF)</span>
-        </a>
-      </div>
-    </aside>
+<section class="section" id="experience">
+<div class="section-heading"><h2 class="section-title">Experience</h2><span class="section-note">Engineering &amp; teaching</span></div>
+<div class="exp-list">
+<article class="exp-item">
+<div class="item-header">
+<h3>Signal Processing Engineer</h3>
+<span class="item-date">Sep. 2024 – Jun. 2025</span>
+</div>
+<p class="exp-org">Hekimed · Part-time, Hybrid (Tehran, Iran)</p>
+<p class="experience-copy">Worked part-time on signal processing and sensor data analysis alongside my studies.</p>
+</article>
+<article class="exp-item">
+<div class="item-header">
+<h3>Teaching Assistant</h3>
+<span class="item-date">Sep. 2023 – Feb. 2025</span>
+</div>
+<p class="exp-org">Sharif University of Technology &amp; University of Tehran</p>
 
-    <main id="main">
-      <section id="about" class="about section">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I am an M.Sc. student in Electrical Engineering (Telecommunications – Systems) at <strong>Sharif University of Technology</strong>, where I work on <strong>blind speech separation</strong> under the supervision of Dr. Massoud Babaie-Zadeh.
-        </p>
-        <p>
-          Before starting my graduate studies at Sharif in 2025, I completed my B.Sc. in Electrical Engineering at the <strong>University of Tehran</strong>. For my undergraduate thesis, supervised by Dr. Saeed Akhavan, I designed a convolutional neural network pipeline to classify human body postures from wearable accelerometer recordings. Alongside my studies, I have worked as a part-time Signal Processing Engineer at Hekimed and served as a teaching assistant for core signal processing, communications, and mathematics courses.
-        </p>
-        <p>
-          My academic interests lie at the intersection of statistical signal processing and machine learning—particularly source separation, speech and audio processing, adaptive filtering, and graph signal processing.
-        </p>
-        <div class="interests-box">
-          <h3>Research Interests</h3>
-          <ul class="tag-list">
-            <li>Blind Source Separation</li>
-            <li>Speech &amp; Audio Processing</li>
-            <li>Statistical Signal Processing</li>
-            <li>Adaptive Filters &amp; Estimation Theory</li>
-            <li>Deep Learning</li>
-            <li>Graph Signal Processing</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="education" class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="edu-list">
-          <article class="edu-item">
-            <div class="item-header">
-              <h3>Sharif University of Technology</h3>
-              <span class="item-date">2025 – Present · Tehran, Iran</span>
-            </div>
-            <p class="item-subtitle">M.Sc. in Electrical Engineering – Telecommunications (Systems)</p>
-            <ul class="item-details">
-              <li><strong>GPA (to date):</strong> 18.12 / 20</li>
-              <li><strong>Thesis (in progress):</strong> Blind Speech Separation (Supervisor: Dr. Massoud Babaie-Zadeh)</li>
-            </ul>
-          </article>
-
-          <article class="edu-item">
-            <div class="item-header">
-              <h3>University of Tehran</h3>
-              <span class="item-date">2021 – 2025 · Tehran, Iran</span>
-            </div>
-            <p class="item-subtitle">B.Sc. in Electrical Engineering (Telecommunications)</p>
-            <ul class="item-details">
-              <li><strong>GPA:</strong> 18.38 / 20</li>
-              <li><strong>Thesis:</strong> Body Posture Recognition Using an Accelerometer Sensor with a CNN Architecture (Supervisor: Dr. Saeed Akhavan)</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="coursework-block">
-          <h3>Selected Graduate &amp; Advanced Coursework <span>Grade out of 20</span></h3>
-          <div class="course-grid">
-            <div class="course-row"><span>Foundations of Computer Vision</span><span class="course-grade">20 / 20</span></div>
-            <div class="course-row"><span>Adaptive Filters</span><span class="course-grade">19.7 / 20</span></div>
-            <div class="course-row"><span>Blind Source Separation</span><span class="course-grade">19.25 / 20</span></div>
-            <div class="course-row"><span>Estimation Theory</span><span class="course-grade">18.7 / 20</span></div>
-            <div class="course-row"><span>Neural Networks &amp; Deep Learning</span><span class="course-grade">18.55 / 20</span></div>
-            <div class="course-row"><span>Graph Signal Processing</span><span class="course-grade">17.2 / 20</span></div>
-            <div class="course-row"><span>Information Theory &amp; Learning</span><span class="course-grade">16 / 20</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="research" class="section">
-        <h2 class="section-title">Research &amp; Theses</h2>
-        <div class="research-list">
-          <article class="research-card">
-            <div class="research-meta">
-              <span class="badge">M.Sc. Thesis · Ongoing</span>
-              <span>Sharif University of Technology</span>
-            </div>
-            <h3>Blind Speech Separation</h3>
-            <p class="research-supervisor">Supervisor: Dr. Massoud Babaie-Zadeh</p>
-            <p class="research-desc">
-              Investigating algorithms for recovering individual speaker signals from overlapped acoustic mixtures without prior knowledge of the mixing process, combining statistical source separation frameworks with data-driven representations.
-            </p>
-          </article>
-
-          <article class="research-card">
-            <div class="research-meta">
-              <span class="badge completed">B.Sc. Thesis · 2025</span>
-              <span>University of Tehran</span>
-            </div>
-            <h3>Body Posture Recognition Using an Accelerometer Sensor with a CNN Architecture</h3>
-            <p class="research-supervisor">Supervisor: Dr. Saeed Akhavan</p>
-            <p class="research-desc">
-              Developed a preprocessing and convolutional neural network classification pipeline for multi-axis accelerometer time-series data to accurately distinguish human postures and transitions.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <h2 class="section-title">Experience</h2>
-        <div class="exp-list">
-          <article class="exp-item">
-            <div class="item-header">
-              <h3>Signal Processing Engineer</h3>
-              <span class="item-date">Sep. 2024 – Jun. 2025</span>
-            </div>
-            <p class="exp-org">Hekimed · Part-time, Hybrid (Tehran, Iran)</p>
-            <p style="font-size: 14.5px; margin-top: 6px;">
-              Worked on signal processing algorithm development, sensor data analysis, and validation workflows in a hybrid engineering environment.
-            </p>
-          </article>
-
-          <article class="exp-item">
-            <div class="item-header">
-              <h3>Teaching Assistant</h3>
-              <span class="item-date">Sep. 2023 – Feb. 2025</span>
-            </div>
-            <p class="exp-org">Sharif University of Technology &amp; University of Tehran</p>
-            <ul class="ta-list">
-              <li>
-                <span class="ta-course">Communication Systems Introduction</span>
-                <span class="ta-meta">University of Tehran · Under Dr. Maryam Sabbaghian (Fall 2024) and Dr. Ali Olfat (Fall 2024)</span>
-              </li>
-              <li>
-                <span class="ta-course">Signals and Systems</span>
-                <span class="ta-meta">University of Tehran · Under Dr. Saeed Akhavan (2023–2024) and Dr. Mohammad Ali Akhaee (Fall 2024)</span>
-              </li>
-              <li>
-                <span class="ta-course">Engineering Mathematics</span>
-                <span class="ta-meta">University of Tehran · Under Dr. Ali Haghi (Fall 2023) and Dr. Mehdi Tale Masouleh (2024–2025)</span>
-              </li>
-              <li>
-                <span class="ta-course">Engineering Probability and Statistics</span>
-                <span class="ta-meta">University of Tehran · Under Dr. Ali Haghi (Fall 2023) and Dr. Amir Masoud Rabiei (Fall 2024)</span>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <h2 class="section-title">Technical Skills &amp; Certifications</h2>
-        <div class="skills-groups">
-          <div class="skill-card">
-            <h3>Programming &amp; Typesetting</h3>
-            <div class="tool-pills">
-              <span class="tool-pill"><img src="assets/python.svg" alt="" width="16" height="16">Python</span>
-              <span class="tool-pill"><img src="assets/matlab.svg" alt="" width="16" height="16">MATLAB</span>
-              <span class="tool-pill"><img class="latex-mark" src="assets/latex.svg" alt="" width="20" height="16">LaTeX</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <h3>Deep Learning &amp; Signal Libraries</h3>
-            <div class="tool-pills">
-              <span class="tool-pill"><img src="assets/pytorch.svg" alt="" width="16" height="16">PyTorch</span>
-              <span class="tool-pill"><img src="assets/tensorflow.svg" alt="" width="16" height="16">TensorFlow</span>
-              <span class="tool-pill"><img src="assets/keras.svg" alt="" width="16" height="16">Keras</span>
-              <span class="tool-pill">Librosa</span>
-              <span class="tool-pill">GSPBox</span>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="cert-heading">Courses &amp; Certifications</h3>
-        <div class="cert-list">
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">PyTorch for Deep Learning Professional Certificate</span>
-              <span class="cert-org">· DeepLearning.AI</span>
-            </div>
-            <span class="cert-date">In progress</span>
-          </div>
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">Generative Adversarial Networks (GANs) Specialization</span>
-              <span class="cert-org">· DeepLearning.AI</span>
-            </div>
-            <span class="cert-date">In progress</span>
-          </div>
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">Machine Learning Specialization</span>
-              <span class="cert-org">· Stanford University</span>
-            </div>
-            <time class="cert-date" datetime="2024-09">Sep. 2024</time>
-          </div>
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">Deep Learning Specialization</span>
-              <span class="cert-org">· DeepLearning.AI</span>
-            </div>
-            <time class="cert-date" datetime="2024-07">Jul. 2024</time>
-          </div>
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">Digital Signal Processing Specialization</span>
-              <span class="cert-org">· EPFL</span>
-            </div>
-            <time class="cert-date" datetime="2024-02">Feb. 2024</time>
-          </div>
-          <div class="cert-item">
-            <div>
-              <span class="cert-title">Advanced Python Programming &amp; Object-Oriented Thinking</span>
-              <span class="cert-org">· Quera</span>
-            </div>
-            <time class="cert-date" datetime="2022-09">Sep. 2022</time>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <h2 class="section-title">Contact</h2>
-        <p>
-          Feel free to reach out by email if you would like to discuss signal processing, source separation, or academic collaborations.
-        </p>
-        <div class="contact-box">
-          <a class="email-chip" href="mailto:arman.majidi.2003@gmail.com">
-            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
-            <span>arman.majidi.2003@gmail.com</span>
-          </a>
-          <button id="copy-email" class="copy-btn" type="button" aria-label="Copy email address">
-            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
-            <span>Copy email</span>
-          </button>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <span>© <span id="year">2026</span> Arman Majidi</span>
-        <a href="#about">Back to top ↑</a>
-      </footer>
-    </main>
-  </div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<details class="teaching-details plain-details"><summary>Courses I have assisted</summary><ul class="ta-list">
+<li>
+<span class="ta-course">Communication Systems Introduction</span>
+<span class="ta-meta">University of Tehran · Under Dr. Maryam Sabbaghian (Fall 2024) and Dr. Ali Olfat (Fall 2024)</span>
+</li>
+<li>
+<span class="ta-course">Signals and Systems</span>
+<span class="ta-meta">University of Tehran · Under Dr. Saeed Akhavan (2023–2024) and Dr. Mohammad Ali Akhaee (Fall 2024)</span>
+</li>
+<li>
+<span class="ta-course">Engineering Mathematics</span>
+<span class="ta-meta">University of Tehran · Under Dr. Ali Haghi (Fall 2023) and Dr. Mehdi Tale Masouleh (2024–2025)</span>
+</li>
+<li>
+<span class="ta-course">Engineering Probability and Statistics</span>
+<span class="ta-meta">University of Tehran · Under Dr. Ali Haghi (Fall 2023) and Dr. Amir Masoud Rabiei (Fall 2024)</span>
+</li>
+</ul></details></article>
+</div>
+</section>
+<section class="section" id="skills">
+<div class="section-heading"><h2 class="section-title">Tools &amp; learning</h2><span class="section-note">What I work with</span></div>
+<div class="skills-groups">
+<div class="skill-card">
+<h3>Programming &amp; Typesetting</h3>
+<div class="tool-pills">
+<span class="tool-pill"><img alt="" height="16" src="assets/python.svg" width="16"/>Python</span>
+<span class="tool-pill"><img alt="" height="16" src="assets/matlab.svg" width="16"/>MATLAB</span>
+<span class="tool-pill"><img alt="" class="latex-mark" height="16" src="assets/latex.svg" width="20"/>LaTeX</span>
+</div>
+</div>
+<div class="skill-card">
+<h3>Deep Learning &amp; Signal Libraries</h3>
+<div class="tool-pills">
+<span class="tool-pill"><img alt="" height="16" src="assets/pytorch.svg" width="16"/>PyTorch</span>
+<span class="tool-pill"><img alt="" height="16" src="assets/tensorflow.svg" width="16"/>TensorFlow</span>
+<span class="tool-pill"><img alt="" height="16" src="assets/keras.svg" width="16"/>Keras</span>
+<span class="tool-pill"><svg aria-hidden="true" class="tool-glyph" viewbox="0 0 24 24"><path d="M2 12h3l2-7 4 14 3-11 3 4h5"></path></svg>Librosa</span>
+<span class="tool-pill"><svg aria-hidden="true" class="tool-glyph" viewbox="0 0 24 24"><path d="m5 5 14 2-7 12-7-14m0 0 7 14m7-12L5 5"></path><circle cx="5" cy="5" r="2"></circle><circle cx="19" cy="7" r="2"></circle><circle cx="12" cy="19" r="2"></circle></svg>GSPBox</span>
+</div>
+</div>
+</div>
+<h3 class="cert-heading">Courses &amp; Certifications</h3>
+<div class="cert-list">
+<div class="cert-item">
+<div>
+<span class="cert-title">PyTorch for Deep Learning Professional Certificate</span>
+<span class="cert-org">· DeepLearning.AI</span>
+</div>
+<span class="cert-date">In progress</span>
+</div>
+<div class="cert-item">
+<div>
+<span class="cert-title">Generative Adversarial Networks (GANs) Specialization</span>
+<span class="cert-org">· DeepLearning.AI</span>
+</div>
+<span class="cert-date">In progress</span>
+</div>
+<div class="cert-item">
+<div>
+<span class="cert-title">Machine Learning Specialization</span>
+<span class="cert-org">· Stanford University</span>
+</div>
+<time class="cert-date" datetime="2024-09">Sep. 2024</time>
+</div>
+<div class="cert-item">
+<div>
+<span class="cert-title">Deep Learning Specialization</span>
+<span class="cert-org">· DeepLearning.AI</span>
+</div>
+<time class="cert-date" datetime="2024-07">Jul. 2024</time>
+</div>
+<div class="cert-item">
+<div>
+<span class="cert-title">Digital Signal Processing Specialization</span>
+<span class="cert-org">· EPFL</span>
+</div>
+<time class="cert-date" datetime="2024-02">Feb. 2024</time>
+</div>
+<div class="cert-item">
+<div>
+<span class="cert-title">Advanced Python Programming &amp; Object-Oriented Thinking</span>
+<span class="cert-org">· Quera</span>
+</div>
+<time class="cert-date" datetime="2022-09">Sep. 2022</time>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="section-heading"><h2 class="section-title">Get in touch</h2><span class="section-note">Email is the best way</span></div>
+<p>If you work on source separation, speech or signal processing, I’d be happy to hear from you.</p>
+<div class="contact-box">
+<a class="email-chip" href="mailto:arman.majidi.2003@gmail.com">
+<svg aria-hidden="true" class="icon"><use href="#i-mail"></use></svg>
+<span>arman.majidi.2003@gmail.com</span>
+</a>
+<button aria-label="Copy email address" class="copy-btn" id="copy-email" type="button">
+<svg aria-hidden="true" class="icon"><use href="#i-copy"></use></svg>
+<span>Copy email</span>
+</button>
+</div>
+</section>
+<footer class="site-footer"><span class="footer-note">A small corner of the web for my work.</span>
+<span>© <span id="year">2026</span> Arman Majidi</span>
+<a href="#about">Back to top ↑</a>
+</footer>
+</main>
+</div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 </body>
 </html>
