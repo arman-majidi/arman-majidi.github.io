@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#4b3d8f"/>
+  <path d="M9 48h8l4-10 6 18 6-20 4 12h18" fill="none" stroke="#b39df3" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="34" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="600" font-size="25" letter-spacing="-0.5" fill="#f7f6f2">AM</text>
+</svg>

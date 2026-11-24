@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arman-majidi.github.io/sitemap.xml
